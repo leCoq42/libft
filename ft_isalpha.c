@@ -6,7 +6,7 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 13:50:33 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/05 14:13:33 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/05 14:43:18 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@ int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 /* # include	<stdio.h>
