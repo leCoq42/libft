@@ -6,11 +6,11 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:22:18 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/06 14:49:05 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/06 16:43:47 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<stdlib.h>
+#include	"headers.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -21,19 +21,19 @@ void	ft_bzero(void *s, size_t n)
 		*ptr++ = '\0';
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 int main(void)
 {
     char str[50] = "0123456789";
-    printf("\nBefore bzero(): %s\n", str);
+    printf("Before bzero(): %s\n", str);
 	bzero(str, 1);
-    printf("\nAfter bzero(): %s\n", str);
+    ft_putstr_fd(str, 1);
 	
     char str2[50] = "0123456789";
-    printf("\nBefore bzero(): %s\n", str2);
-	ft_bzero(str, 5);
-	printf("\nAfter ft_bzero(): %s\n", str2);
+    printf("Before ft_bzero(): %s\n", str2);
+	ft_bzero(str2, 1);
+	ft_putstr_fd(str2, 1);
 
     return 0;
-}
+} */
