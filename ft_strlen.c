@@ -6,13 +6,15 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:19:12 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/06 16:27:53 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/06 16:32:11 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "headers.h"
+
 unsigned long	ft_strlen(const char *s)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	while(s[i])
