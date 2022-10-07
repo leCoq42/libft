@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:22:18 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/06 16:43:47 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/07 16:49:28 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,38 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
+	/* unsigned char	*ptr;
 
 	ptr = (unsigned char *) s;
 	while (n-- > 0)
-		*ptr++ = '\0';
+		*ptr++ = '\0'; */
+	ft_memset(s, 0, n);
 }
 
 /* #include <stdio.h>
 #include <string.h>
 int main(void)
 {
-    char str[50] = "0123456789";
-    printf("Before bzero(): %s\n", str);
-	bzero(str, 1);
-    ft_putstr_fd(str, 1);
+	int i = 0;
 	
-    char str2[50] = "0123456789";
-    printf("Before ft_bzero(): %s\n", str2);
-	ft_bzero(str2, 1);
-	ft_putstr_fd(str2, 1);
+	char str[50] = "0123456789";
+    printf("Before bzero(): %s\n", str);
+	bzero(str, 5);
+    while (i < 10)
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 
-    return 0;
+	write(1, "\n", 1);
+	i = 0;
+    
+	char str2[50] = "0123456789";
+    printf("Before ft_bzero(): %s\n", str2);
+	ft_bzero(str2, 5);
+    while (i < 10)
+	{
+		write(1, &str2[i], 1);
+		i++;
+	}
 } */
