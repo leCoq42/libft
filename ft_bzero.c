@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:22:18 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/07 16:49:28 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/08 17:04:28 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	/* unsigned char	*ptr;
-
-	ptr = (unsigned char *) s;
-	while (n-- > 0)
-		*ptr++ = '\0'; */
 	ft_memset(s, 0, n);
 }
 

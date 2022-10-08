@@ -6,7 +6,7 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:19:12 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/06 16:32:11 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/08 17:10:51 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned long	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }
