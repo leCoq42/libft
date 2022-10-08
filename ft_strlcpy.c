@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   headers.h                                          :+:    :+:            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/08 17:15:39 by mhaan         ########   odam.nl         */
+/*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
+/*   Updated: 2022/10/08 17:16:33 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
-#include	<stdlib.h>
+#include	"headers.h"
 
-size_t	ft_strlen(const char *s);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memset(void *b, int c, size_t len);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+{
+
+
+	return (ft_strlen(src));
+}
