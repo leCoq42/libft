@@ -6,7 +6,7 @@
 /*   By: martin <martin@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/09 12:44:30 by martin        #+#    #+#                 */
-/*   Updated: 2022/10/10 13:56:00 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 14:41:06 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_toupper(int c)
 #include <stdio.h>
 int	main(int argc, char *argv[])
 {
+	(void) argc;
 	printf("%c\n", ft_toupper(argv[1][0]));
 	return(0);
 }

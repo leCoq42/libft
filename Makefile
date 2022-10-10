@@ -6,25 +6,29 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/06 16:21:00 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/10 14:55:02 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME: libft.a
+NAME = libft.a
 
-SRC = ft_*.c
+SRC = *.c
+OBJ = *.o
+DEPS = *.h
 
-CC: gcc
-
-all: $(NAME)
-
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror 
 
-$(NAME):
-	gcc $(CFLAGS) -o $(NAME) 
+all = $(NAME)
+
+$(NAME): $(OBJ)
+	ar -cr $@ $^
+
+%.o: %.c $(DEPS)
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $(OBJ)
 
 fclean:
 	/bin/rm -f $(NAME)
