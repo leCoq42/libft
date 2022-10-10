@@ -6,15 +6,15 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/10 14:55:02 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/10 15:07:30 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = *.c
-OBJ = *.o
-DEPS = *.h
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+DEPS = $(wildcard *.h)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror 
