@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/10 15:13:07 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/10 15:48:36 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ $(NAME): $(OBJ)
 clean:
 	/bin/rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
