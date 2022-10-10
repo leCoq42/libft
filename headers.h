@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/08 17:15:39 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/08 17:17:16 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,4 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);

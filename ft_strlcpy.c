@@ -6,15 +6,34 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/08 17:16:33 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/09 12:40:43 by martin        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"headers.h"
 
-size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char * dst, const char * src, size_t dstsize)
 {
+	size_t	i;
 
-
+	i = 0;
+	while (src[i] && dstsize > 1)
+	{
+		dst[i] = src[i];
+		i++;
+		dstsize--;
+	}
+	dst[i] = 0;
 	return (ft_strlen(src));
+}
+
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char str[] = "Dit is een testzin!";
+	char buff[19];
+
+	printf("Length: %lu, Buff: %s\n", strlcpy(buff, str, 3), buff);
+	return (0);
 }
