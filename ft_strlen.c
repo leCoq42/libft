@@ -6,13 +6,13 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:19:12 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/08 17:10:51 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 11:54:19 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "headers.h"
 
-unsigned long	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

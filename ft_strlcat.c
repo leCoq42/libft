@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 10:26:48 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 11:26:01 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 11:27:35 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	return (dstlen + srclen);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
@@ -38,4 +38,4 @@ int	main(void)
 	
 	char dst2[30] = "Hallo, ";
 	printf("Length: %lu, ft_strlcat: %s\n", ft_strlcat(dst2, src, 28), dst2);
-}
+} */
