@@ -6,11 +6,11 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 11:29:36 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 13:54:12 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 15:10:23 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"headers.h"
+/*#include	"headers.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -24,4 +24,4 @@ int	strncmp(const char *s1, const char *s2, size_t n)
 		
 
 	}
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 13:54:29 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 15:15:04 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
@@ -36,4 +36,4 @@ int	main(void)
 
 	printf("Length: %lu, Buff: %s\n", strlcpy(buff, str, 3), buff);
 	return (0);
-}
+} */

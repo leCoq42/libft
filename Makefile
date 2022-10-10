@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/10 15:07:30 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/10 15:13:07 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ DEPS = $(wildcard *.h)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror 
 
-all = $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar -cr $@ $^

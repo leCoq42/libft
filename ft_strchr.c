@@ -6,7 +6,7 @@
 /*   By: martin <martin@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/09 15:08:46 by martin        #+#    #+#                 */
-/*   Updated: 2022/10/10 13:53:33 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 15:09:48 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*s == c)
 			return ((char *)s);
-		*s++;
+		s++;
 	}
 	if (c == 0)
 		return ((char *)s);
