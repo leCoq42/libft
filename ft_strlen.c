@@ -6,11 +6,11 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:19:12 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 11:54:19 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 13:50:36 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers.h"
+#include	"libft.h"
 
 size_t	ft_strlen(const char *s)
 {

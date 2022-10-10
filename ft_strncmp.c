@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_strncmp.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: mhaan <marvin@codam.nl>                      +#+                     */
+/*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:44:32 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 13:49:49 by mhaan         ########   odam.nl         */
+/*   Created: 2022/10/10 11:29:36 by mhaan         #+#    #+#                 */
+/*   Updated: 2022/10/10 13:54:12 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	"headers.h"
 
-int	ft_isascii(int c)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (n > 0)
+	{
+		if (s1[i] == s2[i])
+			i++;
+		
+
+	}
 }
-
-/*# include	<stdio.h>
-# include	<ctype.h>
-int	main(void)
-{
-	char c = '!';
-
-	printf("ft: %i\n", ft_isascii(c));
-	printf("test: %i", isascii(c));
-}*/

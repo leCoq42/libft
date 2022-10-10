@@ -6,18 +6,18 @@
 /*   By: martin <martin@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/09 15:50:55 by martin        #+#    #+#                 */
-/*   Updated: 2022/10/09 16:28:04 by martin        ########   odam.nl         */
+/*   Updated: 2022/10/10 13:55:19 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"headers.h"
+#include	"libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 
 	last = 0;
-	while(*s)
+	while (*s)
 	{
 		if (*s == c)
 			last = (char *)s;

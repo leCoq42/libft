@@ -6,9 +6,11 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 15:09:30 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/07 17:58:59 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 13:50:00 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include	"libft.h"
 
 int	ft_isprint(int c)
 {

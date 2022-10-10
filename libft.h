@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   headers.h                                          :+:    :+:            */
+/*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 12:06:41 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 13:47:29 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#ifndef	__FT_LIBFT_H__
-#define	__FT_LIBFT_H__
-
-#include	<unistd.h>
-#include	<stdlib.h>
+# include	<unistd.h>
+# include	<stdlib.h>
 
 void	ft_bzero(void *s, size_t n);
 
@@ -32,8 +31,8 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
-size_t	ft_strlcpy(char * dst, const char * src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 char	*ft_strrchr(const char *s, int c);
 

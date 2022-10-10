@@ -6,11 +6,11 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/07 16:54:29 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/08 17:04:10 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 13:50:04 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"headers.h"
+#include	"libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

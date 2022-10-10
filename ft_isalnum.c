@@ -6,9 +6,11 @@
 /*   By: mhaan <marvin@codam.nl>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:24:32 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/05 14:42:21 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/10 13:48:59 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include	"libft.h"
 
 int	ft_isalnum(int c)
 {
