@@ -6,7 +6,7 @@
 /*   By: martin <martin@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/09 15:50:55 by martin        #+#    #+#                 */
-/*   Updated: 2022/10/10 15:15:49 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/14 17:07:13 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	last = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			last = (char *)s;
 		s++;
 	}
-	if (c == 0)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (last);
 }
