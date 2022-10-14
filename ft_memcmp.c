@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlcpy.c                                       :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/14 10:51:24 by mhaan         ########   odam.nl         */
+/*   Created: 2022/10/14 11:43:13 by mhaan         #+#    #+#                 */
+/*   Updated: 2022/10/14 12:44:59 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	size_t	n;
+	const unsigned char	*src1 = s1;
+	const unsigned char	*src2 = s2;
+	size_t				i;
 
 	i = 0;
-	n = dstsize;
-	if (n > 0)
+	while (i++ < n)
 	{
-		while (src[i] && n-- > 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
+		if (src1[i - 1] != src2[i - 1])
+			return (src1[i - 1] - src2[i - 1]);
 	}
-	if (dstsize)
-		dst[n - 1] = 0;
-	return (i);
-}
-
-/* #include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char str[] = "Dit is een testzin!";
-	char buff[19];
-
-	printf("Length: %lu, Buff: %s\n", strlcpy(buff, str, 3), buff);
 	return (0);
-} */
+}
