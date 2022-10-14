@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/14 12:51:28 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/14 17:15:56 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include	<unistd.h>
 # include	<stdlib.h>
+
+int		ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
 
