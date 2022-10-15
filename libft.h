@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/14 17:15:56 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/15 13:42:36 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 int		ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -35,6 +36,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
