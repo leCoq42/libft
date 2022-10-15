@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/14 10:51:24 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/15 16:21:14 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	n = dstsize;
+	//if (dstlen >= dstsize)
+	//	return (dstsize + srclen);
 	if (n > 0)
 	{
-		while (src[i] && n-- > 1)
+		while (src[i] && n-- > 0)
 		{
 			dst[i] = src[i];
 			i++;
