@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 17:14:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/15 16:21:14 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/17 10:23:48 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	n;
+	const size_t	srclen = ft_strlen(src);
+	size_t			i;
 
 	i = 0;
-	n = dstsize;
-	//if (dstlen >= dstsize)
-	//	return (dstsize + srclen);
-	if (n > 0)
+	while (src[i] && i < (dstsize - 1) && dstsize != 0)
 	{
-		while (src[i] && n-- > 0)
-		{
 			dst[i] = src[i];
 			i++;
-		}
 	}
 	if (dstsize)
-		dst[n - 1] = 0;
-	return (i);
+		dst[i] = 0;
+	return (srclen);
 }
 
 /* #include <stdio.h>
