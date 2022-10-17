@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/15 14:07:00 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/17 11:18:48 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
