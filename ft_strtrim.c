@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 13:51:18 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/17 15:02:28 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/17 16:21:55 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*mem;
+	char	*nstr;
 	size_t	start;
 	size_t	end;
-	
+
 	start = 0;
 	end = ft_strlen(s1);
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	while (ft_strchr(set, s1[end]))
+	while (ft_strchr(set, s1[end]) && end > start)
 		end--;
-	mem = f
-	
+	nstr = ft_substr(s1, start, end - start + 1);
+	return (nstr);
 }
