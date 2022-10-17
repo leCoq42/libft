@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:18:01 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/17 11:24:49 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/17 13:45:32 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	mem = (char *)malloc(s1len + s2len + 1 * sizeof(char));
 	if (!mem)
 		return (0);
-	ft_strlcat(mem, s1, s1len + 1);
-	ft_strlcat(mem, s2, s2len + 1);
+	ft_memcpy(mem, s1, s1len);
+	ft_memcpy(mem + s1len, s2, s2len + 1);
 	return (mem);
 }
