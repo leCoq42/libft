@@ -6,13 +6,11 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/15 14:06:04 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/17 11:58:03 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/17 16:41:26 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
-
-// NEEDS FIXING
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
