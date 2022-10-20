@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 10:26:48 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/17 10:25:25 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/20 14:10:31 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dstlen + srclen);
 }
 
-/* #include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char src[] = "Dit is een testzin!";
-	char dst[30] = "Hallo, ";
+// #include <stdio.h>
+// #include <string.h>
+// int	main(void)
+// {
+// 	char src[8] = "D";
+// 	char dst[8] = "H";
 
-	printf("Length: %lu, strlcat: %s\n", strlcat(dst, src, 28), dst);
-	
-	char dst2[30] = "Hallo, ";
-	printf("Length: %lu, ft_strlcat: %s\n", ft_strlcat(dst2, src, 28), dst2);
-} */
+// 	printf("Length: %lu, strlcat: %s\n", strlcat(dst, src, 3), dst);
+// 	char dst2[8] = "H";
+// 	printf("Length: %lu, ft_strlcat: %s\n", ft_strlcat(dst2, src, 3), dst2);
+// }
