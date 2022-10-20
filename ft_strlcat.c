@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 10:26:48 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/20 14:10:31 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/20 15:28:02 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // #include <stdio.h>
 // #include <string.h>
+
+// int main(void)
+// {
+//     char    src[5] = "e";
+//     char    src2[5] = "e";
+//     char    dest[5] = "yoy";
+//     char    dest2[5] = "yoy";
+//     printf("\nlib: %lu", strlcat(dest, src, 9));
+//     printf("\nown: %lu", ft_strlcat(dest2, src2, 9));
+//     printf("\n lib string: %s", dest);
+//     printf("\n own string: %s", dest2);
+// }
+
 // int	main(void)
 // {
 // 	char src[8] = "D";

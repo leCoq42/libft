@@ -6,14 +6,15 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/20 14:12:29 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/20 14:52:20 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
 static size_t	count_splits(char const *s, char c);
-static void		fill_array(char const *s, char c, const size_t cnt, char **arr);
+static void		free_arr(char **arr, size_t i);
+static int		fill_array(char const *s, char c, const size_t cnt, char **arr);
 
 static size_t	count_splits(char const *s, char c)
 {
@@ -32,7 +33,14 @@ static size_t	count_splits(char const *s, char c)
 	return (count);
 }
 
-static void	fill_array(char const *s, char c, const size_t cnt, char **arr)
+static void	free_arr(char **arr, size_t i)
+{
+	while (i-- >= 0)
+		free(arr[i]);
+	free(arr);
+}
+
+static int	fill_array(char const *s, char c, const size_t cnt, char **arr)
 {
 	size_t	i;
 	size_t	start;
@@ -49,10 +57,16 @@ static void	fill_array(char const *s, char c, const size_t cnt, char **arr)
 		while (s[end] && s[end] != c)
 			end++;
 		arr[i] = ft_substr(s, start, end - start);
+		if (!arr[i])
+		{
+			free_arr(arr, i);
+			return (1);
+		}
 		i++;
 		start = end;
 	}
 	arr[i] = 0;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -65,8 +79,9 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)malloc((count + 1) * sizeof(char *));
 	if (!arr)
 		return (0);
-	fill_array(s, c, count, arr);
-	return (arr);
+	if (fill_array(s, c, count, arr) == 0)
+		return (arr);
+	return (0);
 }
 
 // #include	"stdio.h"
