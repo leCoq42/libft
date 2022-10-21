@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/21 11:37:22 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/21 15:41:22 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static size_t	count_splits(char const *s, char c)
 
 static void	free_arr(char **arr, size_t i)
 {
-	while (i-- >= 0)
+	while (i-- > 0)
 		free(arr[i]);
 	free(arr);
 }

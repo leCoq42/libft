@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/07 16:54:29 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/10 13:50:04 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/21 15:37:46 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const char		*stmp = (const char *)src;
 	char			*dtmp;
 
+	if (!dst && !src)
+		return (0);
 	dtmp = (char *)dst;
 	while (n-- > 0)
 		dtmp[n] = stmp[n];

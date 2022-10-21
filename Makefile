@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/21 13:31:32 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/21 13:47:16 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,4 +67,4 @@ clean:
 fclean: clean
 	/bin/rm -f $(NAME)
 
-re: fclean allft_atoi.c
+re: fclean all

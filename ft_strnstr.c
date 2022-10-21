@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 12:47:14 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/14 17:13:49 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/21 15:28:08 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*ptr;
 
 	i = 0;
-	ptr = (char *)haystack;
 	nlen = ft_strlen(needle);
+	ptr = (char *)haystack;
 	if (nlen == 0)
 		return (ptr);
-	while (i < (len - nlen + 1) && ptr[i] && len >= nlen)
-	{
+	if (ft_strlen(haystack) == 0 || nlen > len)
+		return (0);
+	while (i <= len - nlen && ptr[i])
+	{	
 		if (ft_strncmp(&ptr[i], needle, nlen) == 0)
 			return (&ptr[i]);
-		else
-			i++;
+		i++;
 	}
 	return (0);
 }
