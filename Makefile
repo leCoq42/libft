@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/21 13:47:16 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/21 17:21:30 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,10 @@ SRC =	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c 
 
+BONUS =	ft_lstnew.c \
+
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS:.c=.o)
 DEPS = libft.h
 
 CC = gcc
@@ -68,3 +71,6 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(BONUS_OBJ)
+	ar -cr $@ $^

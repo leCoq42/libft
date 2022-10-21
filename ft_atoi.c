@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:15:05 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/20 18:45:05 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/21 16:39:16 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_atoi(const char *str)
 // #include	<stdio.h>
 // int	main (void)
 // {
-// 	char str[] = "   	-12345waedf";
-// 	printf("%i", ft_atoi(str));
+// 	char *str = 0;
+// 	// printf("%i", ft_atoi(str));
+// 	printf("%i", atoi(str));
 // }
