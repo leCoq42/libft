@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:15:05 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/21 16:39:16 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/24 09:33:38 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str && *str > 47 && *str < 58)
 	{
-		val = val * 10 + ((*str) - 48);
+		val = val * 10 + (*str - 48);
 		str++;
 	}
 	return (val * sign);
