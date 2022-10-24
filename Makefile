@@ -6,7 +6,7 @@
 #    By: hbrouwer <hbrouwer@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/03 15:06:58 by hbrouwer      #+#    #+#                  #
-#    Updated: 2022/10/24 16:30:30 by mhaan         ########   odam.nl          #
+#    Updated: 2022/10/24 18:03:35 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 
 BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c
+			ft_lstclear_bonus.c ft_lstiter_bonus.c
 
 OBJS = $(SRC:.c=.o)
 
