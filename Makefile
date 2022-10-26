@@ -5,60 +5,57 @@
 #                                                      +:+                     #
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
-#    Created: 2022/10/24 18:31:33 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/24 18:31:38 by mhaan         ########   odam.nl          #
+#    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
+#    Updated: 2022/10/26 10:32:28 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+SRC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+		ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
+		ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c \
+		ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c \
+		ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
+		ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
+		ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c 
 
-AR = ar
-
-ARFLAGS = -crs
-
-FLAGS = -Wall -Werror -Wextra
-
-SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-		ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-		ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
-		ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
-		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
-		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-
-BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c ft_lstiter_bonus.c
-
-OBJS = $(SRC:.c=.o)
-
-BONUS_OBJS = $(BONUS_SRC:.c=.o)
+BONUS =	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c ft_lstiter_bonus.c
+		
+OBS = $(SRC:.c=.o)
+BOBS = $(BONUS:.c=.o)
 
 ifdef WITH_BONUS
-OBJ_FILES = $(OBJS) $(BONUS_OBJS)
+OBJ_FILES = $(OBS) $(BOBS)
 else
-OBJ_FILES = $(OBJS)
+OBJ_FILES = $(OBS)
 endif
 
-all:		$(NAME)
+CC = cc
+ARFLAGS = -crs
+CFLAGS = -Wall -Wextra -Werror 
 
-%.o:		%.c
-			@$(CC) $(FLAGS) -c $< -o $@
+all: $(NAME)
 
-$(NAME):	$(OBJS)
-			@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-		
-bonus:		$(OBJS) $(BONUS_OBJS)
-			@$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(BONUS_OBJS)
+$(NAME): $(OBJ_FILES)
+	ar $(ARFLAGS) $@ $^
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-			@rm -f $(OBJS) $(BONUS_OBJS)
-	
-fclean:		clean
-			@rm -f $(NAME)
+	/bin/rm -f $(OBS) $(BOBS)
 
-re:			fclean all
+fclean: clean
+	/bin/rm -f $(NAME)
 
-.PHONY:		bonus clean fclean all re
+re:
+	$(MAKE) fclean
+	$(MAKE) all
+
+bonus:
+	$(MAKE) WITH_BONUS=1 all
+
+.PHONY: all clean fclean re bonus
