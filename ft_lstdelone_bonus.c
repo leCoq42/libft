@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 15:53:48 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/24 16:28:00 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/26 14:52:01 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst && del)
-	{
-		del(lst->content);
-		free(lst);
-	}
+	if (!del || !lst)
+		return ;
+	del(lst->content);
+	free(lst);
 }
