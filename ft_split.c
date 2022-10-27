@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/21 15:41:22 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/27 11:53:59 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,6 @@ char	**ft_split(char const *s, char c)
 	char			**arr;
 	const size_t	count = count_splits(s, c);
 
-	if (!s)
-		return (0);
 	arr = (char **)malloc((count + 1) * sizeof(char *));
 	if (!arr)
 		return (0);
