@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/15 14:06:04 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/27 11:52:49 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/10/31 17:27:43 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*mem;
 
 	if (start > ft_strlen(s))
+	{
 		len = 0;
+		start = 0;
+	}
 	else if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
 	mem = (char *)malloc((len + 1) * sizeof(char));
