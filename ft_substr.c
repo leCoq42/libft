@@ -17,10 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*mem;
 
 	if (start > ft_strlen(s))
-	{
 		len = 0;
-		start = 0;
-	}
 	else if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
 	mem = (char *)malloc((len + 1) * sizeof(char));
