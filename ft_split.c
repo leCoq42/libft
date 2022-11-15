@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/31 17:22:56 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/11/15 11:11:55 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,7 @@ static int	fill_array(char const *s, char c, const size_t cnt, char **arr)
 			end++;
 		arr[i] = ft_substr(s, start, end - start);
 		if (!arr[i])
-		{
-			free_arr(arr, i);
-			return (1);
-		}
+			return (free_arr(arr, i), 1);
 		i++;
 		start = end;
 	}
