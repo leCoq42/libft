@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/15 14:06:04 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/11/24 12:33:49 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/11/24 15:20:42 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(mem, s + start, len + 1);
 	return (mem);
 }
-
-/* #include <stdio.h>
-int	main (void)
-{
-	printf("%s", ft_substr("abc", NULL, 5));
-} */

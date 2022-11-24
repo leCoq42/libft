@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/11/15 11:18:26 by mhaan         ########   odam.nl         */
+/*   Updated: 2022/11/24 15:19:59 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,18 +77,3 @@ char	**ft_split(char const *s, char c)
 		return (arr);
 	return (0);
 }
-
-/* #include	"stdio.h"
-int	main(void)
-{
-	// char str[] = "abc---efg--erga-adsgdgs----dsgas-da";
-	// char delim = '-';
-
-	char **arr = ft_split("hello!", ' ');
-
-	while (*arr)
-	{
-		printf("%s", *arr);
-		arr++;
-	}
-} */
