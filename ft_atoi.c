@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:15:05 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/11/24 15:18:24 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/01/31 17:03:02 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int	ft_atoi(const char *str)
 		val = val * 10 + (*str - 48);
 		str++;
 	}
+	if (val < 0 && val != INT_MIN)
+		return (-1);
 	return (val * sign);
 }

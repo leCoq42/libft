@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 13:29:41 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/11/24 12:46:54 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/01/31 17:05:57 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		write(fd, "-2147483648", 11);
 		return ;
