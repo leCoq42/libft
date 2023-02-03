@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:15:05 by mhaan         #+#    #+#                 */
-/*   Updated: 2023/01/31 17:08:31 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/02/03 13:13:15 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ int	ft_atoi(const char *str)
 	if (*str == '+' || *str == '-')
 		str++;
 	while (*str && *str > 47 && *str < 58)
-	{
-		val = val * 10 + (*str - 48);
-		str++;
-	}
-	if (val < 0 && val != INT_MIN)
-		return (-1);
+		val = val * 10 + (*str++ - 48);
 	return (val * sign);
 }

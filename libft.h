@@ -6,15 +6,15 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:57:19 by mhaan         #+#    #+#                 */
-/*   Updated: 2023/01/31 17:02:22 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/01/31 17:17:13 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include	<unistd.h>
 # include	<stdlib.h>
+# include	<unistd.h>
 # include	<limits.h>
 
 typedef struct s_list
