@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 16:47:39 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/11/24 15:19:23 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/02/06 15:53:19 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ t_list	*ft_lstnew(void *content)
 
 	list = (t_list *)malloc(sizeof(t_list));
 	if (!list)
-		return (0);
+		return (NULL);
 	list->content = content;
-	list->next = 0;
+	list->next = NULL;
 	return (list);
 }
