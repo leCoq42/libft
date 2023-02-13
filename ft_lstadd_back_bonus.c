@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 15:09:24 by mhaan         #+#    #+#                 */
-/*   Updated: 2022/10/24 15:52:28 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/02/09 12:20:49 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*head;
+	t_list	*ptr;
 
 	if (!new)
 		return ;
@@ -22,7 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	else
 	{
-		head = ft_lstlast(*lst);
-		head->next = new;
+		ptr = ft_lstlast(*lst);
+		ptr->next = new;
 	}
 }
