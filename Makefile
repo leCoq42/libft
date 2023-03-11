@@ -6,13 +6,12 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2023/03/11 16:03:20 by mhaan         ########   odam.nl          #
+#    Updated: 2023/03/11 18:27:41 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
 ARFLAGS = -crs
 CFLAGS = -Wall -Wextra -Werror
 
