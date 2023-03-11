@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2023/03/11 15:49:26 by mhaan         ########   odam.nl          #
+#    Updated: 2023/03/11 16:03:20 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,24 +29,30 @@ BONUS_SRC := ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-OBJ_DIR :=	./obj
-OBJS :=		$(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.c=.o)))
-B_OBJS :=	$(addprefix $(OBJ_DIR)/,$(notdir $(BONUS_SRC:.c=.o)))
+O_DIR :=	./obj
+OBJS :=		$(addprefix $(O_DIR)/,$(notdir $(SRC:.c=.o)))
+B_OBJS :=	$(addprefix $(O_DIR)/,$(notdir $(BONUS_SRC:.c=.o)))
 
-$(NAME): $(OBJS)
-		ar $(ARFLAGS) $(NAME) $(OBJS)
+ifdef WITH_BONUS
+O_FILES = $(OBJS) $(B_OBJS)
+else
+O_FILES = $(OBJS)
+endif
 
-$(OBJ_DIR)/%.o: %.c
-		@mkdir -p $(OBJ_DIR)
+$(NAME): $(O_FILES)
+		ar $(ARFLAGS) $@ $^
+
+$(O_DIR)/%.o: %.c
+		@mkdir -p $(O_DIR)
 		$(CC) -c $(CFLAGS) $^ -o $@
 
 all: $(NAME)
 
-bonus: $(OBJS) $(B_OBJS)
-		ar $(ARFLAGS) $(NAME) $(OBJS) $(B_OBJS)
+bonus:
+		@$(MAKE) WITH_BONUS=1 all
 
 clean:
-		/bin/rm -rf $(OBJ_DIR)
+		/bin/rm -rf $(O_DIR)
 
 fclean: clean
 		/bin/rm -f $(NAME)
@@ -54,9 +60,6 @@ fclean: clean
 re:
 		$(MAKE) fclean
 		$(MAKE) all
-
-# %.o: %.c
-# $(CC) -c $(CFLAGS) $^ -o $@
 
 .PHONY:
 		all bonus clean fclean re
