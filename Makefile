@@ -6,11 +6,15 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2022/10/26 13:36:13 by mhaan         ########   odam.nl          #
+#    Updated: 2023/03/06 12:08:08 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+CC = gcc
+ARFLAGS = -crs
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = 		ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 			ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
@@ -28,20 +32,7 @@ BONUS = 	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 BOBS = $(BONUS:.c=.o)
 
-CC = gcc
-ARFLAGS = -crs
-CFLAGS = -Wall -Wextra -Werror
-
 all: $(NAME)
-
-$(NAME): $(OBS)
-		ar $(ARFLAGS) $(NAME) $(OBS)
-
-%.o: %.c
-		$(CC) -c $(CFLAGS) $^ -o $@
-
-bonus: $(OBS) $(BOBS)
-		ar $(ARFLAGS) $(NAME) $(OBS) $(BOBS)
 
 clean:
 		/bin/rm -f $(OBS) $(BOBS)
@@ -49,9 +40,18 @@ clean:
 fclean: clean
 		/bin/rm -f $(NAME)
 
+bonus: $(OBS) $(BOBS)
+		ar $(ARFLAGS) $(NAME) $(OBS) $(BOBS)
+
 re:
 		$(MAKE) fclean
 		$(MAKE) all
+
+$(NAME): $(OBS)
+		ar $(ARFLAGS) $(NAME) $(OBS)
+
+%.o: %.c
+		$(CC) -c $(CFLAGS) $^ -o $@
 
 .PHONY:
 		all bonus clean fclean re
