@@ -6,13 +6,12 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2023/03/11 16:03:20 by mhaan         ########   odam.nl          #
+#    Updated: 2023/03/15 11:21:08 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
 ARFLAGS = -crs
 CFLAGS = -Wall -Wextra -Werror
 
@@ -44,7 +43,7 @@ $(NAME): $(O_FILES)
 
 $(O_DIR)/%.o: %.c
 		@mkdir -p $(O_DIR)
-		$(CC) -c $(CFLAGS) $^ -o $@
+		gcc -c $(CFLAGS) $^ -o $@
 
 all: $(NAME)
 
