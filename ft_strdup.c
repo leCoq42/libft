@@ -14,11 +14,12 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*mem;
-
-	mem = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
+	char		*mem;
+	const size_t	s1len = ft_strlen(s1);
+	
+	mem = (char *)malloc((s1len + 1) * sizeof(char));
 	if (!mem)
 		return (0);
-	ft_memcpy(mem, s1, ft_strlen(s1) + 1);
+	ft_memcpy(mem, s1, s1len + 1);
 	return (mem);
 }
