@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/15 14:06:04 by mhaan         #+#    #+#                 */
-/*   Updated: 2023/05/11 12:57:02 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/05/11 18:03:17 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	const size_t slen = ft_strlen(s);
-	char	*mem;
+	const size_t	slen = ft_strlen(s);
+	char			*mem;
 
 	if (start > slen)
 	{
