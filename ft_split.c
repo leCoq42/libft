@@ -6,7 +6,7 @@
 /*   By: mhaan <mhaan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:24:46 by mhaan         #+#    #+#                 */
-/*   Updated: 2023/04/28 14:21:14 by mhaan         ########   odam.nl         */
+/*   Updated: 2023/05/11 12:54:53 by mhaan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ char	**ft_split(char const *s, char c)
 
 	arr = (char **)ft_calloc((count + 1), sizeof(char *));
 	if (!arr)
-		return (0);
+		return (NULL);
 	if (fill_array(s, c, count, arr) == 0)
 		return (arr);
-	return (0);
+	return (NULL);
 }
