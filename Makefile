@@ -6,7 +6,7 @@
 #    By: mhaan <mhaan@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 15:58:09 by mhaan         #+#    #+#                  #
-#    Updated: 2023/04/26 11:35:30 by mhaan         ########   odam.nl          #
+#    Updated: 2023/08/18 14:28:58 by mhaan         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,10 @@ NAME = libft.a
 
 ARFLAGS = -crs
 CFLAGS = -Wall -Wextra -Werror
+
+ifdef OPTIM
+	CFLAGS += -O2 -flto -march=native
+endif
 
 SRC_DIR :=	./src
 SRC		:=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
@@ -34,32 +38,39 @@ OBJS :=		$(addprefix $(O_DIR)/,$(notdir $(SRC:.c=.o)))
 B_OBJS :=	$(addprefix $(O_DIR)/,$(notdir $(BONUS_SRC:.c=.o)))
 
 ifdef WITH_BONUS
-O_FILES = $(OBJS) $(B_OBJS)
+	O_FILES = $(OBJS) $(B_OBJS)
 else
-O_FILES = $(OBJS)
+	O_FILES = $(OBJS)
 endif
 
 $(NAME): $(O_FILES)
-		ar $(ARFLAGS) $@ $^
+	ar $(ARFLAGS) $@ $^
 
 $(O_DIR)/%.o: %.c
-		@mkdir -p $(O_DIR)
-		gcc -c $(CFLAGS) $^ -o $@
+	@mkdir -p $(O_DIR)
+	gcc -c $(CFLAGS) $^ -o $@
 
 all: $(NAME)
 
 bonus:
-		@$(MAKE) WITH_BONUS=1 all
+	@$(MAKE) WITH_BONUS=1 all
+
+optim:
+	@$(MAKE) OPTIM=1 WITH_BONUS=1 all
+
+reoptim:
+	$(MAKE) fclean
+	$(MAKE) optim
 
 clean:
-		/bin/rm -rf $(O_DIR)
+	/bin/rm -rf $(O_DIR)
 
 fclean: clean
-		/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
 re:
-		$(MAKE) fclean
-		$(MAKE) all
+	$(MAKE) fclean
+	$(MAKE) all
 
 .PHONY:
-		all bonus clean fclean re
+	all bonus clean fclean re
