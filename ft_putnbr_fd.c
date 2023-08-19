@@ -14,14 +14,18 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == INT_MIN)
 	{
-		write(fd, "-2147483648", 11);
+		if (write(fd, "-2147483648", 11) == -1)
+			return ;
 		return ;
 	}
 	else if (n < 0)
 	{
-		write(fd, "-", 1);
+		if (write(fd, "-", 1) == -1)
+			return ;
 		n *= -1;
 	}
 	if (n / 10 != 0)
