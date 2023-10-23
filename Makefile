@@ -16,7 +16,7 @@ ARFLAGS = -crs
 CFLAGS = -Wall -Wextra -Werror
 
 ifdef OPTIM
-	CFLAGS += -O2 -flto -march=native
+	CFLAGS += -Ofast -flto -march=native
 endif
 
 SRC_DIR :=	./src
