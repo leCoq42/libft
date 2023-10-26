@@ -48,7 +48,7 @@ $(NAME): $(O_FILES)
 
 $(O_DIR)/%.o: %.c
 	@mkdir -p $(O_DIR)
-	gcc -c $(CFLAGS) $^ -o $@
+	$(CC) -c $(CFLAGS) $^ -o $@
 
 all: $(NAME)
 
