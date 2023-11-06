@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -20,8 +20,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] && i < (dstsize - 1) && dstsize != 0)
 	{
-			dst[i] = src[i];
-			i++;
+		dst[i] = src[i];
+		i++;
 	}
 	if (dstsize)
 		dst[i] = 0;

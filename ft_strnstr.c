@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (ft_strlen(haystack) == 0 || nlen > len)
 		return (0);
 	while (i <= len - nlen && ptr[i])
-	{	
+	{
 		if (ft_strncmp(&ptr[i], needle, nlen) == 0)
 			return (&ptr[i]);
 		i++;

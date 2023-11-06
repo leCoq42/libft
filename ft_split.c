@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 static size_t	count_splits(char const *s, char c);
 static void		free_arr(char **arr, size_t i);
